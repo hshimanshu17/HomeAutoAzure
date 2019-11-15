@@ -240,7 +240,7 @@
 			"properties": {
 				"description": "Scheduling pipeline to transfer data",
 				"annotations": [],
-				"runtimeState": "Started",
+				"runtimeState": "Stopped",
 				"pipelines": [
 					{
 						"pipelineReference": {
