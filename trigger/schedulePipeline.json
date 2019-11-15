@@ -4,13 +4,21 @@
 		"description": "Scheduling pipeline to transfer data",
 		"annotations": [],
 		"runtimeState": "Started",
-		"pipelines": [],
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyFromBlobToSql",
+					"type": "PipelineReference"
+				}
+			}
+		],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
 				"frequency": "Minute",
 				"interval": 1,
 				"startTime": "2019-11-15T08:40:00.000Z",
+				"endTime": "2019-11-16T10:01:18.738Z",
 				"timeZone": "UTC"
 			}
 		}
