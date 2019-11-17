@@ -21,7 +21,7 @@
 		},
 		"trigger_new_properties_typeProperties_scope": {
 			"type": "string",
-			"defaultValue": "/subscriptions/a858e514-b821-4b47-a419-ea83c9bb44ed/resourceGroups/testing_storage/providers/Microsoft.Storage/storageAccounts/adftutorialblob"
+			"defaultValue": "/subscriptions/a858e514-b821-4b47-a419-ea83c9bb44ed/resourceGroups/testing_storage/providers/Microsoft.Storage/storageAccounts/httpstorage1"
 		}
 	},
 	"variables": {
@@ -313,8 +313,8 @@
 				],
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
-					"blobPathBeginsWith": "/adftutorial/blobs/",
-					"ignoreEmptyBlobs": false,
+					"blobPathBeginsWith": "/outcontainer/blobs/",
+					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('trigger_new_properties_typeProperties_scope')]",
 					"events": [
 						"Microsoft.Storage.BlobCreated"
