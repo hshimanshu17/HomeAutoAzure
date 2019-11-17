@@ -131,6 +131,11 @@
 				]
 			}
 		],
+		"parameters": {
+			"SourceFile": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
