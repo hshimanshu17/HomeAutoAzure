@@ -5,12 +5,18 @@
 			"referenceName": "linkedService1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"filename": {
+				"type": "string",
+				"defaultValue": "@pipeline().parameters.sourcefile"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "test-ec835b57-9925-44a2-b8f7-ae6f8cfe5b23.txt",
+				"fileName": "@dataset().filename",
 				"container": "outcontainer"
 			},
 			"columnDelimiter": ",",

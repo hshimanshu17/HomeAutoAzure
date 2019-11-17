@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "CopyFromBlobToSql",
+				"name": "Copy data1",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -19,9 +19,7 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
-							"recursive": true,
-							"wildcardFileName": "test",
-							"enablePartitionDiscovery": false
+							"recursive": true
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings"
@@ -40,7 +38,8 @@
 									"ordinal": 1
 								},
 								"sink": {
-									"name": "ID"
+									"name": "ID",
+									"type": "String"
 								}
 							},
 							{
@@ -49,7 +48,8 @@
 									"ordinal": 2
 								},
 								"sink": {
-									"name": "type"
+									"name": "type",
+									"type": "String"
 								}
 							},
 							{
@@ -58,7 +58,8 @@
 									"ordinal": 3
 								},
 								"sink": {
-									"name": "temerature_far"
+									"name": "temerature_far",
+									"type": "String"
 								}
 							},
 							{
@@ -67,7 +68,8 @@
 									"ordinal": 4
 								},
 								"sink": {
-									"name": "tStamp"
+									"name": "tStamp",
+									"type": "String"
 								}
 							}
 						]
@@ -76,7 +78,10 @@
 				"inputs": [
 					{
 						"referenceName": "SourceBlobDataset",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "@pipeline().parameters.sourcefile"
+						}
 					}
 				],
 				"outputs": [
@@ -87,6 +92,11 @@
 				]
 			}
 		],
+		"parameters": {
+			"sourcefile": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
