@@ -19,9 +19,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'linkedService1'"
 		},
-		"trigger_new_properties_CopyFromBlobToSql_parameters_SourceFile": {
+		"trigger_new_properties_CopyFromBlobToSql_parameters_sourcefile": {
 			"type": "string",
-			"defaultValue": "@triggerBody.fileName"
+			"defaultValue": "@triggerBody.filename"
 		},
 		"trigger_new_properties_typeProperties_scope": {
 			"type": "string",
@@ -39,7 +39,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "CopyFromBlobToSql",
+						"name": "Copy data1",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
@@ -55,9 +55,7 @@
 								"type": "DelimitedTextSource",
 								"storeSettings": {
 									"type": "AzureBlobStorageReadSettings",
-									"recursive": true,
-									"wildcardFileName": "test",
-									"enablePartitionDiscovery": false
+									"recursive": true
 								},
 								"formatSettings": {
 									"type": "DelimitedTextReadSettings"
@@ -72,38 +70,42 @@
 								"mappings": [
 									{
 										"source": {
-											"name": "Prop_0",
-											"type": "String"
+											"type": "String",
+											"ordinal": 1
 										},
 										"sink": {
-											"name": "ID"
+											"name": "ID",
+											"type": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "Prop_1",
-											"type": "String"
+											"type": "String",
+											"ordinal": 2
 										},
 										"sink": {
-											"name": "type"
+											"name": "type",
+											"type": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "Prop_2",
-											"type": "String"
+											"type": "String",
+											"ordinal": 3
 										},
 										"sink": {
-											"name": "temerature_far"
+											"name": "temerature_far",
+											"type": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "Prop_3",
-											"type": "String"
+											"type": "String",
+											"ordinal": 4
 										},
 										"sink": {
-											"name": "tStamp"
+											"name": "tStamp",
+											"type": "String"
 										}
 									}
 								]
@@ -114,7 +116,7 @@
 								"referenceName": "SourceBlobDataset",
 								"type": "DatasetReference",
 								"parameters": {
-									"fileName": "@pipeline().parameters.SourceFile"
+									"filename": "@pipeline().parameters.sourcefile"
 								}
 							}
 						],
@@ -128,7 +130,7 @@
 					}
 				],
 				"parameters": {
-					"SourceFile": {
+					"sourcefile": {
 						"type": "string"
 					}
 				},
@@ -184,9 +186,9 @@
 					"type": "LinkedServiceReference"
 				},
 				"parameters": {
-					"fileName": {
+					"filename": {
 						"type": "string",
-						"defaultValue": "@pipeline().parameters.SourceFile"
+						"defaultValue": "@pipeline().parameters.sourcefile"
 					}
 				},
 				"annotations": [],
@@ -195,7 +197,7 @@
 					"location": {
 						"type": "AzureBlobStorageLocation",
 						"fileName": {
-							"value": "@dataset().fileName",
+							"value": "@dataset().filename",
 							"type": "Expression"
 						},
 						"container": "outcontainer"
@@ -292,7 +294,7 @@
 							"type": "PipelineReference"
 						},
 						"parameters": {
-							"SourceFile": "[parameters('trigger_new_properties_CopyFromBlobToSql_parameters_SourceFile')]"
+							"sourcefile": "[parameters('trigger_new_properties_CopyFromBlobToSql_parameters_sourcefile')]"
 						}
 					}
 				],

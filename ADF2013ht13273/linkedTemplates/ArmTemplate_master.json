@@ -19,9 +19,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'linkedService1'"
 		},
-		"trigger_new_properties_CopyFromBlobToSql_parameters_SourceFile": {
+		"trigger_new_properties_CopyFromBlobToSql_parameters_sourcefile": {
 			"type": "string",
-			"defaultValue": "@triggerBody.fileName"
+			"defaultValue": "@triggerBody.filename"
 		},
 		"trigger_new_properties_typeProperties_scope": {
 			"type": "string",
@@ -63,8 +63,8 @@
 					"linkedService1_connectionString": {
 						"value": "[parameters('linkedService1_connectionString')]"
 					},
-					"trigger_new_properties_CopyFromBlobToSql_parameters_SourceFile": {
-						"value": "[parameters('trigger_new_properties_CopyFromBlobToSql_parameters_SourceFile')]"
+					"trigger_new_properties_CopyFromBlobToSql_parameters_sourcefile": {
+						"value": "[parameters('trigger_new_properties_CopyFromBlobToSql_parameters_sourcefile')]"
 					},
 					"trigger_new_properties_typeProperties_scope": {
 						"value": "[parameters('trigger_new_properties_typeProperties_scope')]"
