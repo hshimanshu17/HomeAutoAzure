@@ -5,6 +5,12 @@
 			"referenceName": "linkedService1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"fileName": {
+				"type": "string",
+				"defaultValue": "@pipeline().parameters.SourceFile"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
