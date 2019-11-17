@@ -11,6 +11,12 @@
 		"AzureSqlDatabase1_connectionString": {
 			"value": ""
 		},
+		"linkedService1_connectionString": {
+			"value": ""
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"value": "/subscriptions/a858e514-b821-4b47-a419-ea83c9bb44ed/resourceGroups/testing_storage/providers/Microsoft.Storage/storageAccounts/adftutorialblob"
+		},
 		"containerUri": {
 			"value": ""
 		},
