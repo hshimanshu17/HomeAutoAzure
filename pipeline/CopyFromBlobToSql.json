@@ -87,6 +87,12 @@
 				]
 			}
 		],
+		"parameters": {
+			"FileName": {
+				"type": "string",
+				"defaultValue": "@pipeline().parameters.SourceFile"
+			}
+		},
 		"annotations": []
 	}
 }
