@@ -177,7 +177,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
-						"fileName": "test-a012cebc-865b-456b-8f76-3165f45a68c0.txt",
+						"fileName": "test-a6fbedca-8d43-4c37-ab8e-10e3b16d73e0.txt",
 						"container": "outcontainer"
 					},
 					"columnDelimiter": ",",
@@ -313,7 +313,7 @@
 				],
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
-					"blobPathBeginsWith": "/outcontainer/blobs/",
+					"blobPathBeginsWith": "/outcontainer/blobs/test",
 					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('trigger_new_properties_typeProperties_scope')]",
 					"events": [
