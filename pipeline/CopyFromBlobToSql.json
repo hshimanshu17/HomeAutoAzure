@@ -56,7 +56,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "temperature_far"
+									"name": "temerature_far"
 								}
 							},
 							{

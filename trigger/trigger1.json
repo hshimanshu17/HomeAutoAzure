@@ -1,0 +1,24 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyFromBlobToSql",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/adftutorial/blobs/",
+			"ignoreEmptyBlobs": false,
+			"scope": "/subscriptions/a858e514-b821-4b47-a419-ea83c9bb44ed/resourceGroups/testing_storage/providers/Microsoft.Storage/storageAccounts/adftutorialblob",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
