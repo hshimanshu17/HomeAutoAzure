@@ -47,7 +47,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "FirstName"
+									"name": "type"
 								}
 							},
 							{
@@ -56,7 +56,16 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "LastName"
+									"name": "temperature_far"
+								}
+							},
+							{
+								"source": {
+									"name": "Prop_3",
+									"type": "String"
+								},
+								"sink": {
+									"name": "tStamp"
 								}
 							}
 						]

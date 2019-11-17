@@ -24,7 +24,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "emp"
+			"table": "temperature_data_incoming"
 		}
 	}
 }
