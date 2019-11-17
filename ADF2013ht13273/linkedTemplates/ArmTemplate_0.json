@@ -167,7 +167,7 @@
 					"type": "LinkedServiceReference"
 				},
 				"parameters": {
-					"FileName": {
+					"fileName": {
 						"type": "string",
 						"defaultValue": "@pipeline().Parameters.SourceFile"
 					}
@@ -178,7 +178,7 @@
 					"location": {
 						"type": "AzureBlobStorageLocation",
 						"fileName": {
-							"value": "@dataset().FileName",
+							"value": "@dataset().fileName",
 							"type": "Expression"
 						},
 						"container": "outcontainer"
@@ -325,7 +325,7 @@
 								"referenceName": "SourceBlobDataset",
 								"type": "DatasetReference",
 								"parameters": {
-									"FileName": "@pipeline().Parameters.SourceFile"
+									"fileName": "@pipeline().Parameters.SourceFile"
 								}
 							}
 						],
