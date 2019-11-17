@@ -77,7 +77,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
-						"fileName": "test-a6fbedca-8d43-4c37-ab8e-10e3b16d73e0.txt",
+						"fileName": "test-ec835b57-9925-44a2-b8f7-ae6f8cfe5b23.txt",
 						"container": "outcontainer"
 					},
 					"columnDelimiter": ",",
