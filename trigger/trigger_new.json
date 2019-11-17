@@ -8,6 +8,9 @@
 				"pipelineReference": {
 					"referenceName": "CopyFromBlobToSql",
 					"type": "PipelineReference"
+				},
+				"parameters": {
+					"SourceFile": "@triggerBody.fileName"
 				}
 			}
 		],
