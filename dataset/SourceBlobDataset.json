@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "temp_records.json",
-				"container": "homeapicontanier"
+				"fileName": "test-a012cebc-865b-456b-8f76-3165f45a68c0.txt",
+				"container": "outcontainer"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
