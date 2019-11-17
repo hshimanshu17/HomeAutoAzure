@@ -109,6 +109,9 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
 					"enableStaging": false
 				},
 				"inputs": [
@@ -118,6 +121,12 @@
 						"parameters": {
 							"FileName": "@pipeline().Parameters.SourceFile"
 						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "OutputSqlDataset",
+						"type": "DatasetReference"
 					}
 				]
 			}
