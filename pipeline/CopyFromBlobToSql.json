@@ -76,10 +76,7 @@
 				"inputs": [
 					{
 						"referenceName": "SourceBlobDataset",
-						"type": "DatasetReference",
-						"parameters": {
-							"fileName": "@pipeline().parameters.SourceFile"
-						}
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
