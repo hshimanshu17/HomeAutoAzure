@@ -119,7 +119,7 @@
 						"referenceName": "SourceBlobDataset",
 						"type": "DatasetReference",
 						"parameters": {
-							"FileName": "@pipeline().Parameters.SourceFile"
+							"fileName": "@pipeline().Parameters.SourceFile"
 						}
 					}
 				],

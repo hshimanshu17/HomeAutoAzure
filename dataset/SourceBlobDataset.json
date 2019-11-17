@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"FileName": {
+			"fileName": {
 				"type": "string",
 				"defaultValue": "@pipeline().Parameters.SourceFile"
 			}
@@ -16,7 +16,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "@dataset().FileName",
+				"fileName": {
+					"value": "@dataset().fileName",
+					"type": "Expression"
+				},
 				"container": "outcontainer"
 			},
 			"columnDelimiter": ",",
