@@ -13,7 +13,7 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/outcontainer/blobs/",
+			"blobPathBeginsWith": "/outcontainer/blobs/test",
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/a858e514-b821-4b47-a419-ea83c9bb44ed/resourceGroups/testing_storage/providers/Microsoft.Storage/storageAccounts/httpstorage1",
 			"events": [
