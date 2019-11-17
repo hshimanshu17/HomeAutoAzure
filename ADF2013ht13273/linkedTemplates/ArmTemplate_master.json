@@ -21,7 +21,7 @@
 		},
 		"trigger_new_properties_CopyFromBlobToSql_parameters_sourcefile": {
 			"type": "string",
-			"defaultValue": "@triggerBody.filename"
+			"defaultValue": "@triggerBody().filename"
 		},
 		"trigger_new_properties_typeProperties_scope": {
 			"type": "string",
