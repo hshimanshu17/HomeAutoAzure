@@ -3,17 +3,7 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
-		"pipelines": [
-			{
-				"pipelineReference": {
-					"referenceName": "CopyFromBlobToSql",
-					"type": "PipelineReference"
-				},
-				"parameters": {
-					"SourceFile": "@triggerBody.fileName"
-				}
-			}
-		],
+		"pipelines": [],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
 			"blobPathBeginsWith": "/outcontainer/blobs/test",
