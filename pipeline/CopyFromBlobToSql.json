@@ -36,8 +36,8 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "Prop_0",
-									"type": "String"
+									"type": "String",
+									"ordinal": 1
 								},
 								"sink": {
 									"name": "ID"
@@ -45,8 +45,8 @@
 							},
 							{
 								"source": {
-									"name": "Prop_1",
-									"type": "String"
+									"type": "String",
+									"ordinal": 2
 								},
 								"sink": {
 									"name": "type"
@@ -54,8 +54,8 @@
 							},
 							{
 								"source": {
-									"name": "Prop_2",
-									"type": "String"
+									"type": "String",
+									"ordinal": 3
 								},
 								"sink": {
 									"name": "temerature_far"
@@ -63,8 +63,8 @@
 							},
 							{
 								"source": {
-									"name": "Prop_3",
-									"type": "String"
+									"type": "String",
+									"ordinal": 4
 								},
 								"sink": {
 									"name": "tStamp"
